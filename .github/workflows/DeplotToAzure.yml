@@ -25,6 +25,6 @@ jobs:
     - name: 'Deploy to Azure WebApp'
       uses: azure/webapps-deploy@v1
       with:
-        app-name: GameOfEgos
+        app-name: ${{ env.AZURE_WEBAPP_NAME }}
         publish-profile: AZURE_WEBAPP_PUBLISH_PROFILE
         package: ./dist/GameOfEgos
